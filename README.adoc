@@ -4,3 +4,10 @@ image:https://travis-ci.org/adminfaces/admin-docs.svg[Build Status (Travis CI), 
 image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/adminfaces?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
 
 This project holds *AdminFaces* documentation hosted by https://adminfaces.github.io/site/#Docs[AdminFaces site^].
+
+
+== Building the docs
+
+Docs can be generated with `mvn generate-resources` maven command.
+
+The documentation will be generated in `target/generated-docs/docs`.
