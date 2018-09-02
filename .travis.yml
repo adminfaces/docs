@@ -1,0 +1,22 @@
+dist: trusty
+services:
+- docker
+cache:
+  directories:
+  - "$HOME/.m2/repository"
+  - "$HOME/.arquillian"
+  - "$HOME/.rvm/"
+  - bundler
+before_script:
+- git config --global http.postBuffer 157286400
+script:
+- if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources
+  -Prelease ; fi ;
+- if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources
+  -Prelease ; fi ;
+after_success:
+- mvn scm-publish:publish-scm
+env:
+  global:
+  - secure: YQ0gEVH0o3Gd/2NWB09hO0AkWrABHJxX5+1AKpA185ieE8OhdRQcqwKVHQTKENgYTUqeZMU8DEEVNZll39J70VWjO+xJMZ2xiVqgCwxIGWpZwpqICVejoCku1lV+CmTTFM93RjZ5aH6G1bY9uAZhSpL5IwFhITy77p2B/OzzfgB85Lf7AWwmIYadGoiA+138KDPUh65e+eEJ0TyKIe4gGma9nFEWnfMUzeJ1hZfau7p8+esQvT1KozJA02dzS5oXpxzzdrJWd9o/luRkgZNT/d5SDPzHSEUNrRwFCwPiF91fjsOd7+lUL1UEBUbgRbio4FSQjVckvt85V/135e6QYO2PGRnQIBMZdVTZpKN9BCKlo9jyX6l4FL2Y1qVH4Xkdc0NHy3zhCqHHiWJyLOw4XpyNH1JcB8275Y3yxo007wwb5bQcgo1Yl5Ws0sIvmszDZDiMykjJkSao/oP9TyOeodHzkSkwOKXiSNe27vX9cRMaXsD4DiGETt908LDAj7GGoyi6ZcHMc04alY1uZoX7anYiA6GlAGNKaXYtitrH4YLJmyN+Lva2Uh9gs1n9gOh4Urbz6lAnN+loc/G1S/BJeZ418ONFKYCa3y0XHaip962Qrg32yhGmsHGlw0YtlEiVpuwVrN78bpHT2X3qZB/9VAvcZFAu9+W9VfP7svrP8Rs=
+  - secure: TP9vxkjItFw1PxQb277IB7FUBzMscwYigiB5uepj3dYQFiQiI0ZW29nDbL3GWmnkivKm7JOfNDrJpAcB/fyYAFWNbyrH6cLsWnIT0zyBieEA0We8qbNG274viZz+djZazWTVLmDcbFSftiaI3HB+4NCMEduu31DRqhNd15gFkFej/+XXDisoYVEftcLb1PjLae6bzUvtcqOwH3kroTzSuKABZMAQuJ4eYoCaX8j4LtqNgePju0OCpmK0RkebQ/7pxNJxqJGejIJ1YZoHYWEOMZ5Mb6WFdI3QTFLdx8DlRbqMZsmfwD08aR4qg2VDTp7KiyT+9l9IGi2B6dNBdtURdJk3YiGmzGknB79R98jsQXB5IX/5GF2EmuDvmquPVEWafdkrAwGyaco8JiLBckQVlTNKnRvZ/yZXws2tIixMln3FwiFL06hfnvAL01rWNkA+XGjPVPe/4WaIhgBOeMIvCIrMnd+ajdijsfCAQx1wEER4br9UyeaFNf4x+4GzaxBwni/Wcg0XWGBwZXG1vQuTfpQfGJe04q7e+BWYM2pw0JVX8u13rnpJavVSzfKVp4RtzHNOnJegl9vsRGi/DfUUH2i4LxgEWCp/PTwAkklH7w6TcdFrR0qisewu+7yCd46NOw1j9saXXEbwMnZ2RWS3VSoZsd9XJx9RWYR+iJKRb8Q=
