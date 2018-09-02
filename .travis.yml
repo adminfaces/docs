@@ -10,8 +10,7 @@ cache:
 before_script:
 - git config --global http.postBuffer 157286400
 script:
-- if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources
-  -Prelease ; fi ;
+- if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources ; fi ;
 - if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources -Prelease
   -Prelease ; fi ;
 after_success:
