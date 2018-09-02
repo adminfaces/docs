@@ -12,7 +12,7 @@ before_script:
 script:
 - if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources
   -Prelease ; fi ;
-- if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources
+- if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources -Prelease
   -Prelease ; fi ;
 after_success:
 - mvn scm-publish:publish-scm
