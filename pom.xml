@@ -16,6 +16,31 @@
         <docs.outputdir>target/generated-docs/docs/latest</docs.outputdir>
     </properties>
     
+    <description>
+       AdminFaces documentation.
+    </description>
+
+    
+    <developers>
+        <developer>
+            <name>Rafael M. Pestano</name>
+            <email>rmpestanoATgmail.com</email>
+        </developer>
+    </developers>
+
+   <licenses>
+        <license>
+            <name>The MIT License (MIT)</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:https://github.com/adminfaces/admin-docs.git</connection>
+        <developerConnection>scm:git:git@github.com:adminfaces/admin-docs.git</developerConnection>
+        <url>https://github.com/adminfaces/admin-docs.git</url>
+    </scm>
+    
     <ciManagement>
         <system>tranvis-ci.org</system>
         <url>https://travis-ci.org/adminfaces/admin-docs</url>
