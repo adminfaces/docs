@@ -290,6 +290,8 @@ As a *convention over configuration* LayoutMB will load templates from the follo
 * `webapp/WEB-INF/templates/template.xhtml` for the `left menu` based template 
 * `webapp/WEB-INF/templates/template-top.xhtml` for horizontal menu layout.
 
+NOTE: If you don't provide a <<Application template>> then built in `admin.xhtml` and `admin-top.xhtml` templates will be used. 
+
 See admin-starer templates for a reference: https://github.com/adminfaces/admin-starter/tree/master/src/main/webapp/WEB-INF/templates
 
 == Configuration

@@ -182,7 +182,7 @@ This makes the theme work offline or in environments with limited access to the 
 
 So if you want a thinner theme you can use the *no-fonts* classifier:
 
-[source,xml]
+[source,xml,subs="attributes+"]
 ----
 <dependency>
     <groupId>com.github.adminfaces</groupId>
