@@ -5,7 +5,6 @@ image:https://badges.gitter.im/Join%20Chat.svg[link="https://gitter.im/adminface
 
 This project holds *AdminFaces* documentation hosted by https://adminfaces.github.io/site/#Docs[AdminFaces site^].
 
-
 == Building the docs
 
 Docs can be generated with `mvn generate-resources` maven command.
