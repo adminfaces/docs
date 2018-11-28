@@ -13,8 +13,9 @@ Admin Starters are sample projects to get you started with AdminFaces. Following
 
 * {link-admin-starter-shiro}[Admin Starter Shiro^]: Admin Starter application using https://shiro.apache.org/[Apache Shiro^] for authentication.
 
+* {link-admin-starter-security}[Admin Starter Security^]: Admin Starter application using `JavaEE 8` https://javaee.github.io/security-spec/[security API^] for authentication and authorization.
 
-TIP: All starters have images published on docker hub so you can easily run them via docker.
+TIP: Most starters have maven archetypes (https://github.com/adminfaces?utf8=%E2%9C%93&q=archetype[see here^]) and images published on docker hub so you can easily see them working locally.
 
 
 image::starter.png[]
