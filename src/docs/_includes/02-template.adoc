@@ -101,7 +101,7 @@ Consider the following sample page:
     </ui:define>
 
     <ui:define name="menu">
-        <ul class="sidebar-menu">
+        <ul class="sidebar-menu" data-widget="tree">
             <li>
                 <p:link href="/index.xhtml" onclick="clearBreadCrumbs()">
                     <i class="fa fa-home"></i>
@@ -202,7 +202,7 @@ Instead of repeating sections like *menu*, *logo*, *head* and *footer* on every 
     </ui:define>
 
     <ui:define name="menu">
-        <ul class="sidebar-menu">
+        <ul class="sidebar-menu" data-widget="tree">
             <li>
                 <p:link href="/index.xhtml" onclick="clearBreadCrumbs()">
                     <i class="fa fa-home"></i>
@@ -293,6 +293,8 @@ As a *convention over configuration* LayoutMB will load templates from the follo
 NOTE: If you don't provide a <<Application template>> then built in `admin.xhtml` and `admin-top.xhtml` templates will be used. 
 
 See admin-starer templates for a reference: https://github.com/adminfaces/admin-starter/tree/master/src/main/webapp/WEB-INF/templates
+
+TIP: https://github.com/adminfaces?utf8=✓&q=archetype[Admin starters archetypes^] already come with both templates configured.
 
 == Configuration
 
