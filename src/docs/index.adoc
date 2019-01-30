@@ -13,7 +13,7 @@
 :link-admin-site: http://adminfaces.github.io/site
 :link-admin-showcase: {link-adminfaces}/admin-showcase
 :link-admin-showcase-openshift: http://admin-showcase-admin.1d35.starter-us-east-1.openshiftapps.com/showcase
-:link-admin-starter-openshift: http://admin-starter-admin.1d35.starter-us-east-1.openshiftapps.com//admin-starter/
+:link-admin-starter-openshift: http://admin-starter-admin.1d35.starter-us-east-1.openshiftapps.com/admin-starter/
 :link-admin-starter: {link-adminfaces}/admin-starter
 :link-admin-template: {link-adminfaces}/admin-template
 :link-admin-theme: {link-adminfaces}/admin-theme
@@ -60,6 +60,8 @@ In subsequent chapters we will drive through each project in detail.
 include::{includedir}/01-theme.adoc[leveloffset=+1]
 
 include::{includedir}/02-template.adoc[leveloffset=+1]
+
+include::{includedir}/03-showcase.adoc[leveloffset=+1]
 
 include::{includedir}/03-starters.adoc[leveloffset=+1]
 

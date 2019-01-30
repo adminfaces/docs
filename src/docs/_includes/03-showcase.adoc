@@ -1,0 +1,10 @@
+= Admin Showcase
+
+
+The showcase is a web application which demonstrates AdminFaces main features and components. It uses <<Admin Theme>> and <<Admin Template>>
+
+img::showcase.png[]
+
+== Demo
+
+A live demo is available on Openshift here: {link-admin-showcase-openshift}
