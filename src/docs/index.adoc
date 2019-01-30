@@ -22,6 +22,7 @@
 :link-admin-starter-tomcat: {link-adminfaces}/admin-starter-tomcat
 :link-admin-starter-persistence: {link-adminfaces}/admin-starter-persistence
 :link-admin-starter-springboot: {link-adminfaces}/admin-starter-springboot
+:link-admin-starter-springsecurity:  {link-adminfaces}/admin-starter-springboot-security
 :link-admin-starter-shiro: {link-adminfaces}/admin-starter-shiro
 :link-admin-starter-security: {link-adminfaces}/admin-starter-security
 :link-admin-mobile: {link-adminfaces}/admin-mobile
