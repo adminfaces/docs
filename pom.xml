@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.adminfaces</groupId>
     <artifactId>admin-docs</artifactId>
-    <version>1.0.0-RC21</version> 
+    <version>1.0.0-RC22_SNPAPSHOT</version> 
     <packaging>jar</packaging>
     
     <properties>
@@ -15,7 +15,7 @@
         <jruby.version>9.1.13.0</jruby.version>
         <docs.outputdir>target/generated-docs/docs/latest</docs.outputdir>
     </properties>
-    
+     
     <description>
        AdminFaces documentation.
     </description>
