@@ -74,6 +74,8 @@ Admin template will bring the following transitive dependencies:
 Which you can override in your pom.xml as needed.
 ====
 
+=== Legacy classifier
+
 [IMPORTANT]
 ====
 Since `admin-template RC21` the template is compatible with PrimeFaces *6.2* and newer versions. To use the template with older PrimeFaces version, use the *legacy classifier*:
