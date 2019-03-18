@@ -125,7 +125,7 @@ Consider the following sample page:
     <ui:define name="menu">
         <ul class="sidebar-menu" data-widget="tree">
             <li>
-                <p:link href="/index.xhtml" onclick="clearBreadCrumbs()">
+                <p:link outcome="/index.xhtml" onclick="clearBreadCrumbs()">
                     <i class="fa fa-home"></i>
                     <span>Home</span>
                 </p:link>
@@ -134,7 +134,7 @@ Consider the following sample page:
 	            General
 	        </li>
 	        <li>
-	            <p:link href="/car-list.xhtml">
+	            <p:link outcome="/car-list.xhtml">
 	                <i class="fa fa-car"></i>
 	                <span>Cars</span>
 	            </p:link>
@@ -227,7 +227,7 @@ Instead of repeating sections like *menu*, *logo*, *head* and *footer* on every 
     <ui:define name="menu">
         <ul class="sidebar-menu" data-widget="tree">
             <li>
-                <p:link href="/index.xhtml" onclick="clearBreadCrumbs()">
+                <p:link outcome="/index.xhtml" onclick="clearBreadCrumbs()">
                     <i class="fa fa-home"></i>
                     <span>Home</span>
                 </p:link>
@@ -236,7 +236,7 @@ Instead of repeating sections like *menu*, *logo*, *head* and *footer* on every 
 	            General
 	        </li>
 	        <li>
-	            <p:link href="/car-list.xhtml">
+	            <p:link outcome="/car-list.xhtml">
 	                <i class="fa fa-car"></i>
 	                <span>Cars</span>
 	            </p:link>
