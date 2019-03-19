@@ -358,7 +358,8 @@ admin.renderMenuSearch=true <27>
 admin.autoHideMessages=true <28>
 admin.messagesHideTimeout=2500 <29>
 admin.iconsEffect=true <30>
-admin.renderAsterisks=false
+admin.renderAsterisks=false <31>
+admin.closableLoading=true <32>
 
 ----
 <1> login page location (relative to webapp). It will only be used if you configure <<Admin Session>>.
@@ -392,6 +393,8 @@ admin.renderAsterisks=false
 <29> Timeout to hide info messages. Note that the timeout is composed by `configured timeout + number of words` in message.
 <30> Enables material effect when icons (e.g modal close, calendar) are clicked.
 <31> Render asterisks on p:outputLabels tied to required fields.
+<32> Makes ajax loading dialog closable. 
+
 IMPORTANT: You don't need to declare all values in your admin-config.properties, you can specify only the ones you need in order to change.
 
 TIP: Since vRC16 config properties can be passed as Java `System properties` or `Environment variables`.
