@@ -18,6 +18,7 @@
 :link-admin-template: {link-adminfaces}/admin-template
 :link-admin-theme: {link-adminfaces}/admin-theme
 :link-admin-designer: {link-adminfaces}/admin-designer
+:link-admin-addon: {link-adminfaces}/admin-addon
 :link-admin-persistence: {link-adminfaces}/admin-persistence
 :link-admin-starter-tomcat: {link-adminfaces}/admin-starter-tomcat
 :link-admin-starter-persistence: {link-adminfaces}/admin-starter-persistence
@@ -26,6 +27,7 @@
 :link-admin-starter-shiro: {link-adminfaces}/admin-starter-shiro
 :link-admin-starter-security: {link-adminfaces}/admin-starter-security
 :link-admin-mobile: {link-adminfaces}/admin-mobile
+:link-jboss-forge: https://forge.jboss.org/
 
 :link-jsf: https://javaserverfaces.java.net/
 :link-primefaces: http://primefaces.org
@@ -70,4 +72,6 @@ include::{includedir}/04-designer.adoc[leveloffset=+1]
 
 include::{includedir}/05-persistence.adoc[leveloffset=+1]
 
-include::{includedir}/06-mobile.adoc[leveloffset=+1]
+include::{includedir}/06-scaffold.adoc[leveloffset=+1]
+
+include::{includedir}/07-mobile.adoc[leveloffset=+1]

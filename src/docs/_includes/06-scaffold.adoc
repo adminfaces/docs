@@ -1,0 +1,200 @@
+= Scaffold
+
+Scaffolding or `code generation` for AdminFaces is brought by {link-admin-addon}[Admin Addon^], a {link-jboss-forge}[JBoss Forge^] addon that generates code for AdminFaces applications.
+
+The addon enables AdminFaces `setup`, `scaffold from JPA entities`, `test-setup`, `new service tests` and `scaffold config` commands.
+ 
+image::admin-addon.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-addon.png?raw=true"]
+
+== Installation
+
+Use install addon from git command:
+
+----
+addon-install-from-git --url https://github.com/adminfaces/admin-addon.git
+----
+
+`or` install from catalog:
+
+image::install-from-catalog.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/install-from-catalog.png?raw=true"]
+
+== Commands 
+
+Below is a detailed description of each command provided by AdminFaces Addon.
+
+=== *AdminFaces: Setup*
+
+====
+It will install AdminFaces dependencies, resources and initial configuration.
+====
+
+=== *AdminFaces: Scaffold*
+ 
+====
+In order to enable *scaffold generate* command you first need to execute *Scaffold setup* command, see images below.
+====
+
+image::scaffold-setup.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/scaffold-setup.png?raw=true"]
+
+image::scaffold-generate01.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/scaffold-generate01.png?raw=true"]
+ 
+image::scaffold-generate02.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/scaffold-generate02.png?raw=true"] 
+
+`Scaffold generate` will create crud, including list, form pages and menu entry, on top of selected entities. The generated crud is based on http://github.com/adminfaces/admin-persistence/[admin-persistence^] framework.
+
+==== Scaffold limitations
+
+To get most of scaffold command and to not generate invalid code, follow these two rules:
+
+. Use *field based access* on your JPA entities, more https://thoughts-on-java.org/access-strategies-in-jpa-and-hibernate/[details here^]. The scaffold command *doesn't support* method (property) based access.
+. Use bidirectional relationships, https://thoughts-on-java.org/hibernate-tips-map-bidirectional-many-one-association/[see here^]
+
+==== Generate entities from database
+
+The recommended way to generate JPA entities from database is to use NetBeans, https://www.javacodegeeks.com/2016/02/netbeans-java-ee-tip-1-entity-classes-database.html[see here^].
+
+It will use field based access and depending on your database schema it will use bidirectional associations.
+ 
+=== *AdminFaces: Scaffold config*
+
+====
+After scaffold generation the addon will create default scaffold configuration files under `src/main/resources/scaffold` for each entity and also a `global-config.yml` file. These configuration files default values are based on the entities provided on scaffold generation and the global file. 
+
+In order to change scaffold configuration for each entity or the global configuration you either can edit the files manually or use *AdminFaces: Scaffold config* command.
+====
+
+image::admin-scaffold-config01.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-scaffold-config01.png?raw=true"]
+
+image::admin-scaffold-config02.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-scaffold-config02.png?raw=true"]
+
+image::admin-scaffold-config03.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-scaffold-config03.png?raw=true"] 
+
+image::admin-scaffold-config04.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-scaffold-config04.png?raw=true"]
+
+
+=== *AdminFaces: Test harness setup*
+====
+It will setup `integration tests` dependencies and resource files such as https://deltaspike.apache.org/documentation/test-control.html[DeltaSpike test control^] and https://github.com/database-rider/database-rider[Database Rider^]. 
+====
+
+image::test-harness-setup.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/test-harness-setup.png?raw=true"]
+
+=== *AdminFaces: New service test*
+====
+The `Test harness setup` command will enable the *New service test* which will generate integration tests based on service classes. The command will also generare `dbunit yml datasets` based on the service entity.
+====
+
+image::admin-new-service-test.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-new-service-test.png?raw=true"]
+
+image::admin-new-service-test02.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/admin-new-service-test02.png?raw=true"]
+
+TIP: Use https://github.com/database-rider/dbunit-addon[dbunit-addon] to `generate test datasets`.
+
+
+== Demo video
+
+== Generated application
+
+You can find the generated application by AdminFaces scaffold here: https://github.com/adminfaces/generated-scaffold-app/ 
+
+It was generated using the following commands (you can paste all commands [at once] on the forge console in eclipse ide or using the forge on command line):
+
+----
+clear;
+
+project-new --named admin-app --top-level-package com.github.adminfaces.app --type war --final-name admin-app --version 1.0 ;
+
+jpa-setup --persistence-unit-name adminPU --jpaVersion 2.1 --provider Hibernate --container JBOSS_EAP7 --db-type H2 --data-source-name java:jboss/datasources/ExampleDS ;
+
+cdi-setup --cdiVersion 1.1 ;
+
+ejb-setup --ejbVersion 3.2 ;
+
+faces-setup --facesVersion 2.2 ;
+
+servlet-setup --servletVersion 3.1 ;
+
+javaee-setup --java-ee-version 7 ;
+
+adminfaces-setup ;
+
+# entities #
+
+jpa-new-entity --named Talk ;
+
+jpa-new-field --named title ;
+
+jpa-new-field --named description --length 2000 ;
+
+jpa-new-field --named date --type java.util.Date --temporal-type DATE ;
+
+constraint-add --on-property title --constraint NotNull ;
+
+constraint-add --on-property description --constraint Size --max 2000 ;
+
+constraint-add --on-property date --constraint NotNull ;
+
+jpa-new-entity --named Room ;
+
+jpa-new-field --named name --length 20 ;
+
+jpa-new-field --named capacity --type java.lang.Short ;
+
+jpa-new-field --named hasWifi --type java.lang.Boolean ;
+
+constraint-add --on-property name --constraint NotNull ;
+
+constraint-add --on-property capacity --constraint NotNull ;
+
+jpa-new-embeddable --named Address ;
+
+jpa-new-field --named street --length 50 --not-nullable ;
+
+jpa-new-field --named city  --length 50 --not-nullable ;
+
+jpa-new-field --named zipcode --columnName --length 10 --not-nullable --type java.lang.Integer ;
+
+jpa-new-field --named state ;
+
+jpa-new-entity --named Speaker ;
+
+jpa-new-field --named firstname ;
+
+jpa-new-field --named surname ;
+
+jpa-new-field --named bio --length 2000 ;
+
+jpa-new-field --named twitter ;
+
+jpa-new-field --named talks --type com.github.adminfaces.app.model.Talk --relationship-type One-to-Many --inverse-field-name speaker ;
+
+jpa-new-field --named address --entity --type com.github.adminfaces.app.model.Address --relationship-type Embedded ;
+
+constraint-add --on-property firstname --constraint NotNull ;
+
+constraint-add --on-property surname --constraint NotNull ;
+
+constraint-add --on-property bio --constraint Size --max 2000 ;
+
+cd ../Talk.java 
+
+jpa-new-field --named room --type com.github.adminfaces.app.model.Room --relationship-type Many-to-One --inverse-field-name talks ;
+
+constraint-add --on-property speaker --constraint NotNull ;
+
+constraint-add --on-property room --constraint NotNull ;
+
+scaffold-setup --provider AdminFaces ;
+
+scaffold-generate --provider AdminFaces --entities com.github.adminfaces.app.model.* ;
+
+adminfaces-test-harness-setup ;
+
+adminfaces-new-service-test --target-services com.github.adminfaces.app.service.* ;
+
+build test --profile it-tests ;
+
+;
+
+
+----
