@@ -395,7 +395,7 @@ admin.enableMobileHeader=true <33>
 <30> Enables material effect when icons (e.g modal close, calendar) are clicked.
 <31> Render asterisks on p:outputLabels tied to required fields.
 <32> Makes ajax loading dialog closable. 
-<33> Adds active menu (icon and text) to navbar on small small devices.
+<33> Adds active menu (icon and text) to navbar on small devices.
 
 IMPORTANT: You don't need to declare all values in your admin-config.properties, you can specify only the ones you need in order to change.
 
