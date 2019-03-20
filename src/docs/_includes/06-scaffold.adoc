@@ -1,6 +1,6 @@
 = Scaffold
 
-Scaffolding or `code generation` for AdminFaces is brought by {link-admin-addon}[Admin Addon^], a {link-jboss-forge}[JBoss Forge^] addon that generates code for AdminFaces applications.
+Scaffolding or `code generation` for AdminFaces is provided by {link-admin-addon}[Admin Addon^], a {link-jboss-forge}[JBoss Forge^] addon that generates code for AdminFaces applications.
 
 The addon enables AdminFaces `setup`, `scaffold from JPA entities`, `test-setup`, `new service tests` and `scaffold config` commands.
  
