@@ -11,7 +11,6 @@
 
 :link-adminfaces: http://github.com/adminfaces
 :link-admin-site: http://adminfaces.github.io/site
-:link-admin-docs: http://adminfaces.github.io/docs
 :link-admin-showcase: {link-adminfaces}/admin-showcase
 :link-admin-showcase-openshift: https://adminfaces.github.io/admin-showcase/
 :link-admin-starter-openshift: https://adminfaces.github.io/admin-starter/
@@ -38,11 +37,11 @@
 
 
 ifeval::["{backend}" == "html5"]
-icon:file-pdf-o[] Read this documentation {link-admin-docs}/latest/index.pdf[in PDF here, role="external", window="_blank"].
+icon:file-pdf-o[] Read this documentation {link-admin-docs}/index.pdf[in PDF here, role="external", window="_blank"].
 endif::[]
 
 ifeval::["{backend}" == "pdf"]
-icon:html5[] Read this documentation {link-admin-docs}/latest/[in HTML5 here, role="external", window="_blank"].
+icon:html5[] Read this documentation {link-admin-docs}/[in HTML5 here, role="external", window="_blank"].
 endif::[]
 
 == Introduction
