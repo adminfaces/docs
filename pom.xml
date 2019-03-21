@@ -36,15 +36,15 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/adminfaces/admin-docs.git</connection>
-        <developerConnection>scm:git:git@github.com:adminfaces/admin-docs.git</developerConnection>
-        <url>https://github.com/adminfaces/admin-docs.git</url>
+        <connection>scm:git:https://github.com/adminfaces/docs.git</connection>
+        <developerConnection>scm:git:git@github.com:adminfaces/docs.git</developerConnection>
+        <url>https://github.com/adminfaces/docs.git</url>
     <tag>1.0.0-RC21</tag>
   </scm>
     
     <ciManagement>
         <system>tranvis-ci.org</system>
-        <url>https://travis-ci.org/adminfaces/admin-docs</url>
+        <url>https://travis-ci.org/adminfaces/docs</url>
     </ciManagement>
 
   
@@ -143,9 +143,9 @@
                     </checkinComment>
                     <content>target/generated-docs</content>
                     <skipDeletedFiles>true</skipDeletedFiles>
-                    <pubScmUrl>scm:git:https://${USER}:${PASS}@github.com/adminfaces/site.git
+                    <pubScmUrl>scm:git:https://${USER}:${PASS}@github.com/adminfaces/docs.git
                     </pubScmUrl>
-                    <scmBranch>master</scmBranch>
+                    <scmBranch>gh-pages</scmBranch>
                 </configuration>
             </plugin>
 
