@@ -13,7 +13,7 @@
         <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
         <asciidoctorj.version>1.5.6</asciidoctorj.version>
         <jruby.version>9.1.13.0</jruby.version>
-        <docs.outputdir>target/generated-docs/docs/latest</docs.outputdir>
+        <docs.outputdir>target/generated-docs/latest</docs.outputdir>
     </properties>
     
     <description>
@@ -156,7 +156,7 @@
         <profile>
             <id>release</id>
             <properties>
-                <docs.outputdir>target/generated-docs/docs/${project.version}</docs.outputdir>
+                <docs.outputdir>target/generated-docs/${project.version}</docs.outputdir>
             </properties>
         </profile>
     </profiles>    
