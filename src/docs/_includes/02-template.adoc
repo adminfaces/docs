@@ -393,9 +393,9 @@ admin.enableMobileHeader=true <33>
 <28> If true PrimeFaces *info* messages will be hidden after a certain timeout.
 <29> Timeout to hide info messages. Note that the timeout is composed by `configured timeout + number of words` in message.
 <30> Enables material effect when icons (e.g modal close, calendar) are clicked.
-<31> Render asterisks on p:outputLabels tied to required fields.
+<31> Render asterisks on p:outputLabels tied to required fields. Can be enabled on specific pages using <ui:param name="renderFormAsterisks" value="true".
 <32> Makes ajax loading dialog closable. 
-<33> Adds active menu (icon and text) to navbar on small devices.
+<33> Adds active menu (icon and text) to navbar on small devices. Can also be disabled per page using <ui:param name="enableMobileHeader" value="false".
 
 IMPORTANT: You don't need to declare all values in your admin-config.properties, you can specify only the ones you need in order to change.
 
