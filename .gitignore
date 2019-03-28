@@ -39,3 +39,4 @@ target/
 
 #linux te files
 *~
+/bin/

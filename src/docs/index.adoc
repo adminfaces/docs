@@ -61,6 +61,8 @@ AdminFaces ecosystem is composed by the following projects:
 
 In subsequent chapters we will drive through each project in detail.
 
+TIP: Watch the version 1.0 announcement video to get a better idea: https://www.youtube.com/watch?v=kg_L8WjOGP8
+
 include::{includedir}/01-theme.adoc[leveloffset=+1]
 
 include::{includedir}/02-template.adoc[leveloffset=+1]
