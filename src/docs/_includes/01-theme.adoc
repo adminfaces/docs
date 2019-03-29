@@ -67,7 +67,7 @@ NOTE: If you use <<Admin Template>> the theme already comes activated.
 Now PrimeFaces components are styled like Bootstrap and AdminLTE.
 
 [.text-center]
-image::messages.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/messages.png"]
+image::messages.png[link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/messages.png"]
 
 TIP: See {link-admin-showcase-openshift}/pages/form/forms.xhtml[showcase forms page^] to get an idea.
 
