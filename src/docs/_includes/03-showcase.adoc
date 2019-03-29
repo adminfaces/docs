@@ -3,7 +3,7 @@
 
 The showcase is a web application which demonstrates AdminFaces main features and components. It uses <<Admin Theme>> and <<Admin Template>>
 
-image::showcase.png[link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/showcase.png"]
+image::showcase.png[link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/showcase.png"]
 
 == Demo
 
