@@ -18,7 +18,7 @@ image:https://cloud.githubusercontent.com/assets/1592273/25071807/dd37121e-2296-
 ** Auto show and hide navbar based on page scroll 
 ** Scroll to top
 * Automatically activates (highlight) menu based on current page +
-image:menu-highlight.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/menu-highlight.png"]
+image:menu-highlight.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/menu-highlight.png"]
 * Custom <<Error Pages, error pages>>
 * Two menu modes, `left` and `horizontal` based menu
 * Configurable, see <<Configuration>>
@@ -26,7 +26,7 @@ image:menu-highlight.png[height="350" width="400" link="https://raw.githubuserco
 * Layout customization via <<Control Sidebar>>
 * High resolution and responsible icons based on Glyphycons and FontAwesome
 * Menu itens search +
-image:menu-search.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/menu-search.png"]
+image:menu-search.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/menu-search.png"]
 * Builtin `dark` and `light` skins
 * Back to previous screen when logging in again after session expiration (or accessing a page via url without being logged in)
 
@@ -510,27 +510,27 @@ The page will also be triggered when a `Throwable` is raised (and not catch).
 
 Here is how 500 page look like:
 
-image::500.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/500.png"]
+image::500.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/500.png"]
 
 .403
 User is redirected to {link-admin-showcase-openshift}/403.xhtml[*403.xhtml*^] whenever a _403_ response code is returned in a request. The page will also be triggered when a `com.github.adminfaces.template.exception.AccessDeniedException` is raised.
 
-image::403.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/403.png"]
+image::403.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/403.png"]
 
 .404
 User will be redirected to {link-admin-showcase-openshift}/non-existing.xhtml[*404.xhtml*^] whenever a 404 response code is returned from a request.
 
-image::404.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/404.png"]
+image::404.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/404.png"]
 
 .ViewExpired
 When a JSF `javax.faces.application.ViewExpiredException` is raised user will be redirected to {link-admin-showcase-openshift}/expired.xhtml[*expired.xhtml*^].
 
-image::expired.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/expired.png"]
+image::expired.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/expired.png"]
 
 .OptimisticLock
 When a JPA `javax.persistence.OptimisticLockException` is thrown user will be redirected to {link-admin-showcase-openshift}/optimistic.xhtml[*optimistic.xhtml*^].
 
-image::optimistic.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/optimistic.png"]
+image::optimistic.png[height="350" width="400" link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/optimistic.png"]
 
 === Providing custom error pages
 
@@ -629,7 +629,7 @@ IMPORTANT: You can contribute your language locale to AdminFaces, https://github
 ControlSidebar is a component which provides a panel so user can `customize` the template layout:
 
 [.text-center]
-image::controlsidebar.png[height="300" width=400, link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/controlsidebar.png"]
+image::controlsidebar.png[height="300" width=400, link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/controlsidebar.png"]
 
 Options selected by user are stored on `browser local storage` so they are remembered no matter the user logs off the application.
 
@@ -677,7 +677,7 @@ Also don't forget to remove the `hidden-sm hidden-xs` classes from the button/li
 AdminFaces provides a composite component which will manage breadCrumbs as user navigates through the pages. 
 
 [.text-center]
-image::breadcrumbs.png[height="400" width=100% link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/breadcrumbs.png"]
+image::breadcrumbs.png[height="400" width=100% link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/breadcrumbs.png"]
 
 === Usage 
 
@@ -702,7 +702,7 @@ To use the composite component just declare the `admin  namespace` and provide a
 +
 So when user enters the car-form page a breadCrumb will be created based on currently edited car or 'New Car' label will be used when adding a Car:
 +
-image:car-form-bread.png[width=100%, height=300, link="https://raw.githubusercontent.com/adminfaces/admin-docs/master/src/docs/images/car-form-bread.png"]
+image:car-form-bread.png[width=100%, height=300, link="https://raw.githubusercontent.com/adminfaces/docs/master/src/docs/images/car-form-bread.png"]
 +
 The *link* is the page where user will be redirected when clicking the breadCrumb link.
 +
