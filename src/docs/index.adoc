@@ -16,6 +16,7 @@
 :link-admin-starter-openshift: https://adminfaces.github.io/admin-starter/
 :link-admin-starter: {link-adminfaces}/admin-starter
 :link-admin-template: {link-adminfaces}/admin-template
+:link-docs-github: http://adminfaces.github.io/docs
 :link-admin-theme: {link-adminfaces}/admin-theme
 :link-admin-designer: {link-adminfaces}/admin-designer
 :link-admin-addon: {link-adminfaces}/admin-addon
