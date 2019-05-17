@@ -12,7 +12,7 @@
 :link-adminfaces: http://github.com/adminfaces
 :link-admin-site: http://adminfaces.github.io/site
 :link-admin-showcase: {link-adminfaces}/admin-showcase
-:link-admin-showcase-openshift: https://adminfaces.github.io/admin-showcase/
+:link-admin-showcase-openshift: http://showcase-adminfaces.1d35.starter-us-east-1.openshiftapps.com/showcase
 :link-admin-starter-openshift: https://adminfaces.github.io/admin-starter/
 :link-admin-starter: {link-adminfaces}/admin-starter
 :link-admin-template: {link-adminfaces}/admin-template
