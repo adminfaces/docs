@@ -567,7 +567,10 @@ Following are the default labels in admin resource bundle:
 ----
 #general
 admin.version=${project.version}
+label.home=Home
 label.go-back=Go back to
+label.or-to=or to
+label.previous-page=previous page
 
 #403
 label.403.header=403
@@ -612,6 +615,8 @@ controlsidebar.label.sidebar-skin=Dark Sidebar Skin
 controlsidebar.txt.sidebar-skin=If checked <b class\="sidebar-bold">dark</b> skin will be used for control sidebar, otherwise <b class\="sidebar-bold">light</b> skin will be used.
 controlsidebar.header.skins=Skins
 
+#menu search
+menu.search.placeholder=Search menu itens...
 ----
 
 [TIP] 
