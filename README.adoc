@@ -7,6 +7,6 @@ This project holds *AdminFaces* documentation: https://adminfaces.github.io/docs
 
 == Building the docs
 
-Docs can be generated with `mvn generate-resources` maven command.
+Admin docs can be generated with `mvn generate-resources` maven command.
 
 The documentation will be generated in `target/generated-docs/docs`.
