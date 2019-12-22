@@ -10,12 +10,12 @@ cache:
 before_script:
 - git config --global http.postBuffer 157286400
 script:
-- if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources ; fi ;
-- if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources -Prelease
-  -Prelease ; fi ;
+- if [[ $TRAVIS_COMMIT_MESSAGE != *"prepare release"* ]]; then mvn clean generate-resources
+  ; fi ;
+- if [[ $TRAVIS_COMMIT_MESSAGE == *"prepare release"* ]]; then mvn clean generate-resources
+  -Prelease -Prelease ; fi ;
 after_success:
 - mvn scm-publish:publish-scm
 env:
   global:
-  - secure: YQ0gEVH0o3Gd/2NWB09hO0AkWrABHJxX5+1AKpA185ieE8OhdRQcqwKVHQTKENgYTUqeZMU8DEEVNZll39J70VWjO+xJMZ2xiVqgCwxIGWpZwpqICVejoCku1lV+CmTTFM93RjZ5aH6G1bY9uAZhSpL5IwFhITy77p2B/OzzfgB85Lf7AWwmIYadGoiA+138KDPUh65e+eEJ0TyKIe4gGma9nFEWnfMUzeJ1hZfau7p8+esQvT1KozJA02dzS5oXpxzzdrJWd9o/luRkgZNT/d5SDPzHSEUNrRwFCwPiF91fjsOd7+lUL1UEBUbgRbio4FSQjVckvt85V/135e6QYO2PGRnQIBMZdVTZpKN9BCKlo9jyX6l4FL2Y1qVH4Xkdc0NHy3zhCqHHiWJyLOw4XpyNH1JcB8275Y3yxo007wwb5bQcgo1Yl5Ws0sIvmszDZDiMykjJkSao/oP9TyOeodHzkSkwOKXiSNe27vX9cRMaXsD4DiGETt908LDAj7GGoyi6ZcHMc04alY1uZoX7anYiA6GlAGNKaXYtitrH4YLJmyN+Lva2Uh9gs1n9gOh4Urbz6lAnN+loc/G1S/BJeZ418ONFKYCa3y0XHaip962Qrg32yhGmsHGlw0YtlEiVpuwVrN78bpHT2X3qZB/9VAvcZFAu9+W9VfP7svrP8Rs=
-  - secure: TP9vxkjItFw1PxQb277IB7FUBzMscwYigiB5uepj3dYQFiQiI0ZW29nDbL3GWmnkivKm7JOfNDrJpAcB/fyYAFWNbyrH6cLsWnIT0zyBieEA0We8qbNG274viZz+djZazWTVLmDcbFSftiaI3HB+4NCMEduu31DRqhNd15gFkFej/+XXDisoYVEftcLb1PjLae6bzUvtcqOwH3kroTzSuKABZMAQuJ4eYoCaX8j4LtqNgePju0OCpmK0RkebQ/7pxNJxqJGejIJ1YZoHYWEOMZ5Mb6WFdI3QTFLdx8DlRbqMZsmfwD08aR4qg2VDTp7KiyT+9l9IGi2B6dNBdtURdJk3YiGmzGknB79R98jsQXB5IX/5GF2EmuDvmquPVEWafdkrAwGyaco8JiLBckQVlTNKnRvZ/yZXws2tIixMln3FwiFL06hfnvAL01rWNkA+XGjPVPe/4WaIhgBOeMIvCIrMnd+ajdijsfCAQx1wEER4br9UyeaFNf4x+4GzaxBwni/Wcg0XWGBwZXG1vQuTfpQfGJe04q7e+BWYM2pw0JVX8u13rnpJavVSzfKVp4RtzHNOnJegl9vsRGi/DfUUH2i4LxgEWCp/PTwAkklH7w6TcdFrR0qisewu+7yCd46NOw1j9saXXEbwMnZ2RWS3VSoZsd9XJx9RWYR+iJKRb8Q=
+  - secure: jWbaz6YKMLRZH5muQae/L3sU79dnGFhDWZ/byeUOlj1+l6PAvZ+X9wYib9nVYAtlOhjChH2yDekxWYBxO0+LbjnXMvzIDgedlD4ar4smvIQT5bnjxfzRdyvPo29DQnZGd7GI4JBFTR2q9aJ/rgeTrL4kL4J+M+8ojtEO9cYuX0c8wuMBAUIKCQORjCGSvaVeluaqv4thYX3n0mU+5+8Jpg1Na+nxGAF+Y33ssFOZd3jY7HrnrRNzmIdapJqe5GByGQhRoQJXNvD1cHOJdjN4WaEsfVrTUxzeLa1BJEbG/to30Wg6B4Mwf2JzhfBjm+AXjOQk3FUi97CS7bwreLqvjKgp7k4uTr54L47KBNn7EUgZqTkruYIx1ZHoiNxh22Yno12tsNnvE75prEWT6beGAcaw10WS722d3JMWNuX91RxunY3HhQhXunUhjFGBHPsiWLN6JaG9iPDqasrMFZAkqZuz+wKojy0zlK/csnEtb8eUgpurIv239SfXqnKPmHdTAX/DzehYm2z4w2zOGqXbm1A5DyEShrwumoI+dbCdl46MqI0RVryU+Wr/asbS38pFSHUVM7xAs/DzW1l/Cn3Tqna/H43ip20C0Ay3tMPaQpTXmkoJW/GW2NuHY011fcbARtfpweOSquqwsTGjWztSm/L4bf8GoBk0cim6QymykdU=
